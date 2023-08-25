@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi App de Notas</title>
+</head>
+<body>
+    <h1>Alumnos</h1>
+    <ul>
+        {% for alumno in alumnos %}
+        <li>{{ alumno.nombre }} {{ alumno.apellido }}</li>
+        {% endfor %}
+    </ul>
+    <form method="POST" action="/agregar">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" required><br>
+        <label for="apellido">Apellido:</label>
+        <input type="text" name="apellido" required><br>
+        <!-- Agrega más campos para las actividades -->
+        <input type="submit" value="Guardar">
+    </form>
+    
+    
+</body>
+</html>
