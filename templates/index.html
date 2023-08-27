@@ -7,9 +7,13 @@
     <h1>Alumnos</h1>
     <ul>
         {% for alumno in alumnos %}
-        <li>{{ alumno.nombre }} {{ alumno.apellido }}</li>
+        <li>{{ alumno.nombre }} {{ alumno.apellido }}
+            <a href="{{ url_for('editar_alumno', alumno_id=alumno.id) }}">Editar</a>
+            <a href="{{ url_for('eliminar_alumno', alumno_id=alumno.id) }}">Eliminar</a>
+        </li>
         {% endfor %}
     </ul>
+
     <form method="POST" action="/agregar">
         <label for="nombre">Nombre:</label>
         <input type="text" name="nombre" required><br>

@@ -1,0 +1,18 @@
+<form method="POST" action="/editar/{{ alumno.id }}">
+    <label for="nombre">Nombre:</label>
+    <input type="text" name="nombre" value="{{ alumno.nombre }}" required><br>
+    <!-- Agrega los campos de actividades formativas y sumativas -->
+    <label for="actividad_formativa">Actividad Formativa:</label>
+    <input type="text" name="actividad_formativa" value="{{ alumno.actividad_formativa }}">
+    <br>
+    <label for="nota_actividad_formativa">Nota Actividad Formativa:</label>
+    <input type="number" name="nota_actividad_formativa" value="{{ alumno.nota_actividad_formativa }}">
+    <br>
+    <label for="actividad_sumativa">Actividad Sumativa:</label>
+    <input type="text" name="actividad_sumativa" value="{{ alumno.actividad_sumativa }}">
+    <br>
+    <label for="nota_actividad_sumativa">Nota Actividad Sumativa:</label>
+    <input type="number" name="nota_actividad_sumativa" value="{{ alumno.nota_actividad_sumativa }}">
+    <br>
+    <!-- Otros campos y botones -->
+</form>

@@ -9,6 +9,11 @@ class Alumno(db.Model):
     nombre = db.Column(db.String(100), nullable=False)
     apellido = db.Column(db.String(100), nullable=False)
     actividades = db.relationship('Actividad', backref='alumno', lazy=True)
+    # ... otros campos ...
+    actividad_formativa = db.Column(db.String(100))
+    nota_actividad_formativa = db.Column(db.Integer)
+    actividad_sumativa = db.Column(db.String(100))
+    nota_actividad_sumativa = db.Column(db.Integer)
 
 
 class Actividad(db.Model):
